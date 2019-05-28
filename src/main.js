@@ -3,8 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import jquery from 'jquery'
+import Axios from 'axios'
+Vue.prototype.$ = jquery;
 
-Vue.config.productionTip = false
+Axios.defaults.baseURL = 'http://api.crack.lux.pub/api';
+Vue.prototype.$ajax = Axios;
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({

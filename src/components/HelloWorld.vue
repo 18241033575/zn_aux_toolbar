@@ -90,6 +90,13 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  created(){
+    let token = this.$route.token;
+    console.log(token);
+    this.$.get('api.crack.lux.pub/api/user_info',{params: {token: token}},function (res) {
+      console.log(res);
+    })
   }
 }
 </script>
