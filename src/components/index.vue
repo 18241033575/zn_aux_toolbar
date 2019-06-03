@@ -38,7 +38,7 @@
           if (res.status_code === 200){
               // 显示信息
             this.info = res.data;
-            console.log(this.info);
+            localStorage.setItem('USER',JSON.stringify(this.info))
           } else {
               // 弹窗提示token错误
           }
