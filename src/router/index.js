@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import index from '@/components/index'
 import time from '@/components/time'
 import salary from '@/components/salary'
+import salaryDet from '@/components/salaryDet'
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/salary',
       name: 'salary',
       component: salary,
+    },
+    {
+      path: '/salaryDet',
+      name: 'salaryDet',
+      component: salaryDet,
     }
   ]
 })

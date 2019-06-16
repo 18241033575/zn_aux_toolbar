@@ -16,6 +16,7 @@
       data(){
           return{
             info: {},
+            token: '',
             listData: [
               {
                 class: 'iconfont icon-zhiwen bg01',
@@ -31,12 +32,13 @@
           }
       },
       created(){
-      //    045121cf7e30898b6c0a49ba54265d2c
-      //   let token = this.$route.token;
         let token = '7e30898b6c0a49ba';
+        // let token = this.$route.query.token;
+        this.token = token;
         this.$.get('http://api.crack.lux.pub/api/user_info',{token: token},function (res) {
           if (res.status_code === 200){
               // 显示信息
+            console.log(res);
             this.info = res.data;
             localStorage.setItem('USER',JSON.stringify(this.info))
           } else {
