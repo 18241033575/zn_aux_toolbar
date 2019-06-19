@@ -12,16 +12,7 @@
         name: "salary",
       data(){
           return{
-            salary_data: [
-               {
-                 ctime: "2019-04-12 15:30:12",
-                 title: "2019年3月工资条"
-               },
-              {
-                ctime: "2019-04-12 15:30:12",
-                title: "2019年3月工资条"
-              },
-            ]
+            salary_data: {}
           }
       },
       methods:{
